@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Automatisk potteplantevanning &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'microbit-automatisk-vanning';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tall_variabler.html">Print</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="terningkastsimulator.html">Terningkast og store talls lov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Skiskyting.html">Skiskyting - visuell simulering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmering%20i%20Python%20-%20del%202.html">Arrayer og tabeller</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Mattespill-KidsaKoder.html">Mattespill - fra kidsakoder.no</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Fuglepopulasjon-pyplot.html">Fuglepopulasjon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forsok_med_sum_av_flere_terninger.html">Forsøk med mange terninger - normalfordeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Automatisk potteplantevanning</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmicrobit-automatisk-vanning.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/microbit-automatisk-vanning.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Automatisk potteplantevanning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potteplante"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduksjon">Introduksjon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kompetansemal-lk2020">Kompetansemål (LK2020)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utstyrsliste">Utstyrsliste</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#koblingsskjema-og-komponenter">Koblingsskjema og komponenter</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jordfuktsensor">Jordfuktsensor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vannpumpe">Vannpumpe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transistor">Transistor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kretsskjema">Kretsskjema</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reell-oppkobling-kabelspaghetti">Reell oppkobling (kabelspaghetti)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programmering-av-styringsenheten">Programmering av styringsenheten</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="automatisk-potteplantevanning">
+<h1>Automatisk potteplantevanning<a class="headerlink" href="#automatisk-potteplantevanning" title="Permalink to this heading">#</a></h1>
+<section id="potteplante">
+<h2><img alt="potteplante" src="_images/potteplante-mikrobit.jpg" /><a class="headerlink" href="#potteplante" title="Permalink to this heading">#</a></h2>
+<p>Av Sigurd Rage, USN</p>
+</section>
+<section id="introduksjon">
+<h2>Introduksjon<a class="headerlink" href="#introduksjon" title="Permalink to this heading">#</a></h2>
+<p>I denne aktiviteten skal vi se på hvordan vi kan bruke en microbit til å styre en vannpumpe basert på sensordata fra en jordfuktsensor. Først kommer en beskrivelse av et nesten ferdig system med fuktsensor og pumpe koblet ferdig koblet til microbiten, deretter kommer et forslag til hvordan dette prosjektet kan gjennomføres i klasserommet. Prosjektet krever at man har tilgang på et “breakout board” for microbit, ellers er det utstyret som kreves hyllevare og relativt billig i anskaffelse.</p>
+<p>Hele prosjektet, med halvferdig kode kan lastes ned her:</p>
+<p><a class="reference external" href="https://www.tinkercad.com/things/0w034yFNd52?sharecode=QMJCpwQsSBU0375orkOx1ITjqXw1VgHsDG9D1CzmHjE">https://www.tinkercad.com/things/0w034yFNd52?sharecode=QMJCpwQsSBU0375orkOx1ITjqXw1VgHsDG9D1CzmHjE</a></p>
+</section>
+<section id="kompetansemal-lk2020">
+<h2>Kompetansemål (LK2020)<a class="headerlink" href="#kompetansemal-lk2020" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>designe og lage et produkt basert på en kravspesifikasjon (4. trinn)</p></li>
+<li><p>utforske teknologiske systemer som er satt sammen av ulike deler, og beskrive hvordan delene fungerer og virker sammen (4. trinn)</p></li>
+<li><p>designe og lage et produkt basert på brukerbehov (7. trinn)</p></li>
+<li><p>utforske, lage og programmere teknologiske systemer som består av deler som virker sammen (7. trinn)</p></li>
+<li><p>bruke programmering til å utforske naturfaglige fenomener (10. trinn)</p></li>
+</ul>
+<p>Aktiviteten passer nok best for elever fra 7. trinn og oppover som er vant til å bruke tilleggssutstyr til microbit, feks TinkerKit eller tilsvarende. Det er også et opplegg som kan kobles til elektrisitets- og kretslære.</p>
+</section>
+<section id="utstyrsliste">
+<h2>Utstyrsliste<a class="headerlink" href="#utstyrsliste" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Microbit (V1 eller V2)</p></li>
+<li><p>Breakout board</p></li>
+<li><p>Koblingsbrett</p></li>
+<li><p>Jordfuktsensor (resistiv type)</p></li>
+<li><p>Motstand 2.2 kΩ</p></li>
+<li><p>Transistor NPN (feks BC377)</p></li>
+<li><p>Vannpumpe (3 – 5V)</p></li>
+<li><p>Eksperimentkabler</p></li>
+<li><p>Krokodillekabler</p></li>
+<li><p>Slange til vannpumpe</p></li>
+<li><p>Vanntank</p></li>
+<li><p>Potteplante</p></li>
+</ul>
+</section>
+<section id="koblingsskjema-og-komponenter">
+<h2>Koblingsskjema og komponenter<a class="headerlink" href="#koblingsskjema-og-komponenter" title="Permalink to this heading">#</a></h2>
+<p><img alt="Koblingsskjema med mikrobit og komponenter" src="_images/koblingsskjema-plantevanner.png" /></p>
+<p>I dette skjemaet er jordfuktssensoren koblet til P0 og pumpestyringen koblet til P1. Transistoren virker som en bryter for pumpestyring, og får styringssignalet fra P1. Mellom P1 og transistoren ligger en motstand på 2.2kΩ, da transistoren kun trenger bittelitt strøm for å “slå inn”</p>
+<section id="jordfuktsensor">
+<h3>Jordfuktsensor<a class="headerlink" href="#jordfuktsensor" title="Permalink to this heading">#</a></h3>
+<p>I dette prosjektet brukes en såkalt resistiv jordfuktssensor, som er den enkleste og billigste typen. Denne sensoren har normalt 3 eller 4 koblingspunkter ut fra modulen. VCC kobles til 3V og GND kobles til 0V. AO (analog out) vil gi en spenning inn på P0 avhengig av hvor fuktig jorden i potteplanten er. På noen sensortyper står det SIG istedet for AO på signalpinnen (se kretstegning)</p>
+<p>Noen slike sensorer har også en DO (digital out), denne skal ikke brukes.</p>
+<p>Sensoren måler elektrisk motstand i plantejorda. Når jorda blir fuktig vil den lede mer strøm mellom elektrodene enn hvis den er tørr. Typisk vil spenningen fra AO være høyere ved tørr jord og lavere ved fuktig jord. Denne spenningsverdien blir avlest som en digital heltallsverdi av microbit, som vi kan bruke i styringsprogrammet til å ta en avgjørelse om potteplanten trenger vanning. For å en fornuftig terskelverdi for vanning bør man teste denne sensoren i jord.</p>
+<p>En svakhet med denne typer sensorer er at de korroderer i fuktig miljø, som gir de en noe kort levetid. Det finnes også kapasitive jordfuktsensorer, som koster noe mer og har litt mer komplisert tilkobling.</p>
+</section>
+<section id="vannpumpe">
+<h3>Vannpumpe<a class="headerlink" href="#vannpumpe" title="Permalink to this heading">#</a></h3>
+<p>Dette er en vannpumpe som drives av en DC-motor (likestrømsmotor) som krever mellom 3 og 5V. Pumpemotoren trekker en god del strøm, og kan derfor ikke styres direkte fra pinnene til microbiten. Istedet kobles motoren rett på microbitens innebygde strømkilde, pinnene 3V og 0V, men for å kunne styre den, legger vi en transistor imellom. Da vil transistoren fungere som en elektronisk bryter til pumpen.</p>
+<p>Microbit sine tilkoblingsporter kan maksimalt levere 10mA strøm, mens 3V – pinnen kan levere 90mA (V1) eller opptil 120mA (V2).</p>
+<p>En annen ting å ha i bakhodet er at denne pumpen er relativt svak, så vannreservoaret bør være i samme høyde som potteplanten.</p>
+</section>
+<section id="transistor">
+<h3>Transistor<a class="headerlink" href="#transistor" title="Permalink to this heading">#</a></h3>
+<p>Transistoren er en av det 20. århundrets største oppfinnelser og har muliggjort alle de avanserte digitale enhetene vi omgir oss med til daglig. Det er en halvlederkomponent, og har 3 tilkoblinger: Base, Collector og Emitter. I denne kretsen fungerer transistoren rett og slett som en elektronisk bryter, som kan styre om det skal gå strøm igjennom eller ikke. Base kobles til +3V og Emitter kobles til 0V (eller GND). Hvorvidt det går strøm gjennom transistoren eller ikke styres av Collector. Det skal svært lite strøm til på Collector for at transistoren leder, derfor kobler vi en relativt stor motstand i serie foran denne terminalen (tilkoblingen).</p>
+</section>
+</section>
+<section id="kretsskjema">
+<h2>Kretsskjema<a class="headerlink" href="#kretsskjema" title="Permalink to this heading">#</a></h2>
+<p><img alt="Kretsskjema for prosjektet" src="_images/potteplantevanner-kretsskjema.png" /></p>
+<p>Over ser vi et mer standardisert kretsskjema for prosjektet. I sammenligning med koblingsskjemaet lenge opp er det mer abstrakt, men selve sammenkoblingen av komponentene er mer tydelig og oversiktlig.</p>
+</section>
+<section id="reell-oppkobling-kabelspaghetti">
+<h2>Reell oppkobling (kabelspaghetti)<a class="headerlink" href="#reell-oppkobling-kabelspaghetti" title="Permalink to this heading">#</a></h2>
+<p><img alt="Hvordan det egentlig ser ut" src="_images/kabelspaghetti.jpg" /></p>
+<p>Alle skjematiske fremstillinger av kretser ser som regel mye ryddigere ut på papir enn hvordan den faktiske kretsen blir seendes ut på brettet. Hvordan komponentene kobles sammen på koblingsbrettet, og hvordan man får koblet de eksterne delene inn på kretsen krever noe kunnskap om på hvilke måter dette kan gjøres. I litteraturen om teknologi i skolen kalles dette for “handlingskunnskap”.</p>
+<p>I dette eksempelet har vi brukt eksperimentkabler, som er ferdig lagde kabler med hann- og hunnterminaler som passer til brettet, samt krokodillekabler for å koble på pumpen.</p>
+<p>Det er også fullt mulig å koble at sammen kun med krokodillekabler, uten koblingsbrett, da blir kabelsalaten tilsvarende mer rotete 🙂</p>
+</section>
+<section id="programmering-av-styringsenheten">
+<h2>Programmering av styringsenheten<a class="headerlink" href="#programmering-av-styringsenheten" title="Permalink to this heading">#</a></h2>
+<p><img alt="Eksempelkode for styringsenheten" src="_images/pumpestyring-makecode.png" /></p>
+<p>Programmet over kan være et godt utgangspunkt for styring av pumpen, men den er ikke ferdig. Likevel, et par viktige momenter å ta med seg:</p>
+<p>Sensorverdier fra jordfuktsensoren leses som analogverdi fra P0</p>
+<p>Styring av pumpen skjer ved å sette digital verdi på P1 til 1 (3V) for å starte pumpen, og digital verdi P1 til 0 (0V) for å stoppe den.</p>
+<p>I blokken “ved start” setter vi styringssignalet til pumpen til LOW, eller 0V for å være helt sikre på at pumpen ikke starter av seg selv</p>
+<p>For å kunne lese av den digitale verdien fra jordfuktsensoren har vi en kodeblogg “når knapp A trykkes” som skriver denne verdien til skjerm. Dette kan være nyttig for å finne ut hva slags verdier som denne sensoren gir fra tørr eller fuktig jord.</p>
+<p>Selve pumpestyringen skjer i “gjenta for alltid”-sløyfen. I denne eksempelkoden er grensen for at pumpen skal starte satt til verdien 500, men den reelle grenseverdien må finnes ved utprøving på en reell potteplante.</p>
+<p>Dersom avlest verdi er høyere enn grenseverdien vil if-testen slå inn, og pumpen kjøres i 5 sekunder. Denne verdien må også finnes ved eksperimentering: hvor mye vann pumpes per tid, og hvor mye vann trenger potteplanten per vanning.</p>
+<p>Deretter venter systemet i 1 minutt før den sjekker fuktigheten i potteplanten på nytt. Dette er nok alt for kort tid i en reell situasjon, og systemet trenger kanskje ikke å sjekke for vanning mer enn et par ganger om dagen. Dessuten trenger potteplanten noe tid for at vannet skal fordeles jevnt i jorden.</p>
+<p>Altså:</p>
+<ul class="simple">
+<li><p>Man må finne en reell grenseverdi for jordfuktsensoren slik at vanning kommer på ønsket tørrhet</p></li>
+<li><p>Man må beregne hvor mye vann som trenges for hver vanning, og hvor lang tid dette tar for pumpen</p></li>
+<li><p>Man må legge inn en generell forsinkelse slik at planten ikke overvannes. Typisk trenger man ikke å sjekke jordfukten mer enn en gang om dagen.</p></li>
+</ul>
+<p>Koden kan lastes ned fra <a class="reference external" href="http://makecode.org">makecode.org</a> her: <a class="reference external" href="https://makecode.microbit.org/_bfKHo6A08Ecc">https://makecode.microbit.org/_bfKHo6A08Ecc</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potteplante"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduksjon">Introduksjon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kompetansemal-lk2020">Kompetansemål (LK2020)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utstyrsliste">Utstyrsliste</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#koblingsskjema-og-komponenter">Koblingsskjema og komponenter</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jordfuktsensor">Jordfuktsensor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vannpumpe">Vannpumpe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transistor">Transistor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kretsskjema">Kretsskjema</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reell-oppkobling-kabelspaghetti">Reell oppkobling (kabelspaghetti)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programmering-av-styringsenheten">Programmering av styringsenheten</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

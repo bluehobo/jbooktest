@@ -1,0 +1,1046 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Arrayer og tabeller &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Programmering i Python - del 2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mattespill - fra kidsakoder.no" href="Mattespill-KidsaKoder.html" />
+    <link rel="prev" title="Skiskyting - visuell simulering" href="Skiskyting.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tall_variabler.html">Print</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="terningkastsimulator.html">Terningkast og store talls lov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Skiskyting.html">Skiskyting - visuell simulering</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Arrayer og tabeller</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Mattespill-KidsaKoder.html">Mattespill - fra kidsakoder.no</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Fuglepopulasjon-pyplot.html">Fuglepopulasjon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forsok_med_sum_av_flere_terninger.html">Forsøk med mange terninger - normalfordeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microbit-automatisk-vanning.html">Automatisk potteplantevanning</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FProgrammering i Python - del 2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Programmering i Python - del 2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Arrayer og tabeller</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Arrayer og tabeller</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lister-tupler-og-biblioteker">Lister, tupler og biblioteker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasjon-av-lister">Iterasjon av lister</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrayer">Arrayer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasjon-av-arrays">Iterasjon av Arrays</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funksjoner">Funksjoner</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hvordan-bruke-funksjoner-i-matematisk-sammenheng">Hvordan bruke funksjoner i matematisk sammenheng</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biblioteker">Biblioteker</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-imports">“Star imports”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-metoden">Import-metoden</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alias-metoden">Alias-metoden</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importere-del-av-et-bibliotek">Importere del av et bibliotek</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>matplotlib<span class="w"> </span>--quiet
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="arrayer-og-tabeller">
+<h1>Arrayer og tabeller<a class="headerlink" href="#arrayer-og-tabeller" title="Permalink to this heading">#</a></h1>
+<section id="lister-tupler-og-biblioteker">
+<h2>Lister, tupler og biblioteker<a class="headerlink" href="#lister-tupler-og-biblioteker" title="Permalink to this heading">#</a></h2>
+<p>I tillegg til de vanlige datatypene vi allerede har snakket om har Pyton også mulighet for å huske flere verdier en og samme variabeltype. Python har innebygget 3 forskjellige typer for dette, lister, tupler og dictionaries. Vi skal her kun se på den første typen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deklarasjon av liste uten innhold</span>
+<span class="n">tomListe</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># liste med floats</span>
+<span class="n">listeDesimaltall</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.3</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">]</span>
+<span class="c1">#liste med forskjellige datatyper</span>
+<span class="n">listeMix</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ole&quot;</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.89</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">listeDesimaltall</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">listeMix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.3, 4.2, -8.0, 1.6]
+[&#39;Ole&#39;, 101, True, -4.89]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Som dere ser av eksemplet kan en liste bestå av ingen, en eller flere elementer. Siden Python ikke er kresent på datatyper så kan en liste bestå av hvilken som helst av disse og til og med forskjellige datatyper i samme liste. Dette er ikke vanlig i andre programmeringsspråk. For å skrive ut ett element fra listen brukes skrivemåten minListe[posisjon]. Legg merke til at referansen til første element starter på 0 og ikke 1.</p>
+<p>Det går også an å skrive ut deler av listen på en enkel måte. Grensene angis slik: minListe[a:b]. Dersom du ikke angir start eller slutt vil Python anta at du vil ha med alt fra begynnelsen eller alt frem til slutten av listen. Se følgende eksempel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minListe</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ole&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Kari&quot;</span><span class="p">,</span> <span class="s2">&quot;Ali&quot;</span><span class="p">,</span> <span class="s2">&quot;Miriam&quot;</span><span class="p">,</span> <span class="s2">&quot;Martine&quot;</span><span class="p">,</span> <span class="s2">&quot;Jonas&quot;</span><span class="p">,</span> <span class="s2">&quot;Vilde&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Kari&#39;, &#39;Ali&#39;]
+[&#39;Ole&#39;, &#39;Thomas&#39;, &#39;Kari&#39;]
+[&#39;Miriam&#39;, &#39;Martine&#39;, &#39;Jonas&#39;, &#39;Vilde&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Det finnes mange funksjoner som hører til datatypen lister, og vi skal ikke gå igjennom alle sammen her. Men som eksempler på nyttige funksjoner skal vi se på hvordan man kan legge til og fjerne elementer, samt sortere lister. Se eksempelet under:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minListe</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ole&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Kari&quot;</span><span class="p">,</span> <span class="s2">&quot;Ali&quot;</span><span class="p">,</span> <span class="s2">&quot;Miriam&quot;</span><span class="p">,</span> <span class="s2">&quot;Martine&quot;</span><span class="p">,</span> <span class="s2">&quot;Jonas&quot;</span><span class="p">,</span> <span class="s2">&quot;Vilde&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">)</span>
+
+<span class="c1"># Legger til element på slutten av listen</span>
+<span class="n">minListe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Hermann&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">)</span>
+
+<span class="c1"># Fjerner et objekt fra listen</span>
+<span class="n">minListe</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Kari&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">)</span>
+
+<span class="c1"># Fjerner element fra listen basert på ideks, og sparer i en variabel (popping)</span>
+<span class="n">navn</span> <span class="o">=</span> <span class="n">minListe</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">navn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">)</span>
+
+<span class="c1"># Sorterer listen alfabetisk</span>
+<span class="n">minListe</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ole&#39;, &#39;Thomas&#39;, &#39;Kari&#39;, &#39;Ali&#39;, &#39;Miriam&#39;, &#39;Martine&#39;, &#39;Jonas&#39;, &#39;Vilde&#39;]
+[&#39;Ole&#39;, &#39;Thomas&#39;, &#39;Kari&#39;, &#39;Ali&#39;, &#39;Miriam&#39;, &#39;Martine&#39;, &#39;Jonas&#39;, &#39;Vilde&#39;, &#39;Hermann&#39;]
+[&#39;Ole&#39;, &#39;Thomas&#39;, &#39;Ali&#39;, &#39;Miriam&#39;, &#39;Martine&#39;, &#39;Jonas&#39;, &#39;Vilde&#39;, &#39;Hermann&#39;]
+Thomas
+[&#39;Ole&#39;, &#39;Ali&#39;, &#39;Miriam&#39;, &#39;Martine&#39;, &#39;Jonas&#39;, &#39;Vilde&#39;, &#39;Hermann&#39;]
+[&#39;Ali&#39;, &#39;Hermann&#39;, &#39;Jonas&#39;, &#39;Martine&#39;, &#39;Miriam&#39;, &#39;Ole&#39;, &#39;Vilde&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Append legger til et element på slutten av listen.</p></li>
+<li><p>Remove trekker fra bestemte objekter i lista. Hvis flere elementer er likeså fjernes alle.</p></li>
+<li><p>Pop henter ut et element fra listen og returnerer elementet slik at det kan for eksempel skrives ut eller legges i en annen variabel. Dersom pop kalles uten indeks (for eksempel: minListe.pop() ), vil den hente ut det siste elementet i listen.</p></li>
+</ul>
+</section>
+<section id="iterasjon-av-lister">
+<h2>Iterasjon av lister<a class="headerlink" href="#iterasjon-av-lister" title="Permalink to this heading">#</a></h2>
+<p>Å iterere en liste betyr å «bla igjennom lista», gjerne i en for-sløyfe. I mange kodespråk gjøres dette på den første måten som vist i eksempelet over ved at man lager en teller (index) som teller fra 0 og til antall elementer i listen, og henter ut elementene ved hjelp av denne indeksen.</p>
+<p>En mer snedig måte å gjøre dette på er vist i den nederste metoden: Her skjønner pyton at den skal gå igjennom listen, men i stedet for å bruke en tallindeks, henter python automatisk hvert element in i sløyfevariablen direkte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minListe</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ole&quot;</span><span class="p">,</span> <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Kari&quot;</span><span class="p">,</span> <span class="s2">&quot;Ali&quot;</span><span class="p">,</span> <span class="s2">&quot;Miriam&quot;</span><span class="p">,</span> <span class="s2">&quot;Martine&quot;</span><span class="p">,</span> <span class="s2">&quot;Jonas&quot;</span><span class="p">,</span> <span class="s2">&quot;Vilde&quot;</span><span class="p">]</span>
+
+<span class="c1"># Iterasjon med index, len() gir lengden på lista</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">minListe</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">minListe</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+<span class="c1"># for mellomrom i utskrift</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Iterasjon med elementmetode (snedig)</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">minListe</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ole
+Thomas
+Kari
+Ali
+Miriam
+Martine
+Jonas
+Vilde
+
+Ole
+Thomas
+Kari
+Ali
+Miriam
+Martine
+Jonas
+Vilde
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="arrayer">
+<h2>Arrayer<a class="headerlink" href="#arrayer" title="Permalink to this heading">#</a></h2>
+<p>En array er en form for liste hvor alle elementene er av samme datatype. Et array kan være endimensjonalt, som en vanlig liste, men kan også ha flere dimensjoner. For eksempel vil en tabell kunne representeres ved hjelp av en 2-dimensjonal liste. Python har ikke denne datatypen innebygget, men slike finnes i mange standardbiblioteker vi kan benytte oss av. Et vanlig og bra bibliotek til matematikk heter numpy. Dette biblioteker inneholder også ferdigkompilerte rutiner skrevet i C som gjør at det kan gjøre beregninger med og behandle store datamengder på relativt kort tid.</p>
+<p>Et array kan lages manuelt, og inneholde forskjellige datatyper akkurat som den innebygde typen liste i python. Men vi skal heller konsentrere oss om hvordan vi kan bruke disse til å lage funksjonstabeller og matematiske analyser</p>
+<p>Funksjonen linspace lager en array hvor du kan bestemme start og sluttverdi, og hvor mange elementer du vil ha med i arrayet. Dette er nyttig når man for eksempel skal lage en tabell med x-verdier. Se på følgende eksempel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2. -1.  0.  1.  2.  3.  4.  5.  6.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Man kan lage slike linspaces (linear spaces) med så mange elementer du vil for bedre oppløsning under beregninger, plotting og så videre. Hvis jeg vil ha 50 x-verdier mellom -3 til +8 skriver jeg kommandoen slik:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-3.         -2.7755102  -2.55102041 -2.32653061 -2.10204082 -1.87755102
+ -1.65306122 -1.42857143 -1.20408163 -0.97959184 -0.75510204 -0.53061224
+ -0.30612245 -0.08163265  0.14285714  0.36734694  0.59183673  0.81632653
+  1.04081633  1.26530612  1.48979592  1.71428571  1.93877551  2.16326531
+  2.3877551   2.6122449   2.83673469  3.06122449  3.28571429  3.51020408
+  3.73469388  3.95918367  4.18367347  4.40816327  4.63265306  4.85714286
+  5.08163265  5.30612245  5.53061224  5.75510204  5.97959184  6.20408163
+  6.42857143  6.65306122  6.87755102  7.10204082  7.32653061  7.55102041
+  7.7755102   8.        ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hvis jeg nå vil gjøre beregninger på x-tabellen min gjøres det superenkelt og superraskt ved hjelp av de vanlige regneartene i python. Hvis jeg vil ha en funksjonstabell over f-verdiene til funksjonen: $<span class="math notranslate nohighlight">\( f(x) = x^2 - 4 \)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 5.          3.70345689  2.50770512  1.41274469  0.41857559 -0.47480217
+ -1.26738859 -1.95918367 -2.55018742 -3.04039983 -3.42982091 -3.71845065
+ -3.90628905 -3.99333611 -3.97959184 -3.86505623 -3.64972928 -3.333611
+ -2.91670137 -2.39900042 -1.78050812 -1.06122449 -0.24114952  0.67971678
+  1.70137443  2.82382341  4.04706372  5.37109538  6.79591837  8.32153269
+  9.94793836 11.67513536 13.5031237  15.43190337 17.46147439 19.59183673
+ 21.82299042 24.15493544 26.5876718  29.1211995  31.75551853 34.4906289
+ 37.32653061 40.26322366 43.30070804 46.43898376 49.67805081 53.0179092
+ 56.45855893 60.        ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Det er imidlertid en ting du ikke kan gjøre med arrays fra numpy-biblioteket, og det er å bruke matematikkfunksjoner fra andre biblioteker på arrays. Du kan for eksempel ikke bruke kvadratrot eller trigonometriske funksjoner fra math-biblioteket, da må du bruke de funksjonene som er inkludert i numpy slik:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.14112001 -0.35796023 -0.55683643 -0.72776815 -0.86217727 -0.95331856
+ -0.99661815 -0.98990308 -0.93351033 -0.83026995 -0.68536298 -0.5060615
+ -0.30136363 -0.08154202  0.14237173  0.35914064  0.5578863   0.72863478
+  0.86281718  0.95369963  0.99672126  0.98972305  0.9330562   0.8295645
+  0.68444163  0.50497047  0.30015769  0.08028167 -0.14362322 -0.36032048
+ -0.55893528 -0.72950025 -0.86345571 -0.95407918 -0.99682278 -0.98954144
+ -0.93260058 -0.82885774 -0.68351918 -0.50387864 -0.29895126 -0.0790212
+  0.14487449  0.36149974  0.55998336  0.73036456  0.86409286  0.9544572
+  0.9969227   0.98935825]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Grunnen til dette er at math-biblioteket kun kan operere med et og ett element om gangen, mens numpy-biblioteket skjønner at operasjonen skal gjøres på hvert eneste elemen i arrayet for seg. (Dette kalles for elementvis operasjon)</p>
+</section>
+<section id="iterasjon-av-arrays">
+<h2>Iterasjon av Arrays<a class="headerlink" href="#iterasjon-av-arrays" title="Permalink to this heading">#</a></h2>
+<p>Iterasjon av arrays er helt likt som for lister. Følgende eksempel itererer et array som heter x, og regner riemannsummen under funksjonsverdien. Verdien til elementene hentes ut med x[i], der i er elementnummeret som telles opp i for-sløyfa:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">minArray</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">minArray</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3.0
+-2.0
+-1.0
+0.0
+1.0
+2.0
+3.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Det går også an å bruke «elementmetoden» på arrays.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">minArray</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3.0
+-2.0
+-1.0
+0.0
+1.0
+2.0
+3.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="plotting">
+<h1>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h1>
+<p>I forrige seksjon brukte vi print til å se på verdiene i listene og arrayene våre. Det går selvfølgelig an å plotte grafer fra disse tabellverdiene. Det finnes mange biblioteker som kan tilby dette, men vi skal konsentrere oss om funksjonen plot fra biblioteket matplotlib. Dette er et stort bibliotek med mange undergrupper – derfor skal vi ikke importere hele biblioteket, så legg merke til hvordan vi importerer her. (Mer om importmetoder lenger ned i dokumentet!)</p>
+<p>For å lage et enkelt plot lager jeg en x og en y-tabell først, og sender disse som argumenter inn i plottefunksjonen. Her er også kode for å sette navn på aksene. Flere funksjoner i dette biblioteket kan du finne online. I dette eksempelet vil jeg plotte grafen til funksjonen $<span class="math notranslate nohighlight">\( f(x)=-x^3-3x^2+2x-2 \)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Lager x-verditabell</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span>
+
+<span class="c1"># Plotter y mot x og setter på aksenavn</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x-akse&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y-akse&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x14956ce2910&gt;]
+</pre></div>
+</div>
+<img alt="_images/dff72acd0289142fcb7f9095919852bcd3f8ec50205b0f05a44dfd39fa252e02.png" src="_images/dff72acd0289142fcb7f9095919852bcd3f8ec50205b0f05a44dfd39fa252e02.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="funksjoner">
+<h1>Funksjoner<a class="headerlink" href="#funksjoner" title="Permalink to this heading">#</a></h1>
+<p>Funksjoner i programmering er ikke det helt samme som funksjoner i matematikk, men de har noen likheter. I programmering er funksjoner ferdiglagede kodesnutter som skal brukes flere ganger. Du har allerede brukt mange forskjellige funksjoner i de kodesnuttene som er beskrevet over i dokumentet.</p>
+<p>I turtle-biblioteket var det f.eks funksjonen forward(), left(), right() som fikk skilpadden til å bevege seg. Du har mange ganger brukt den innebyggede funksjonen print() for å skrive verdier til konsoll. Vi har også sett på matematiske funksjoner, som sin() og sqrt() og i forrige seksjon så vi på funksjonen plot() som kunne skrive ut grafer.
+Du kan også lage dine egne funksjoner i python. Funksjoner kan ta såkalt input (en eller flere) og den kan returnere output (en eller flere), men de må ikke. Dette kalles parameteroverføring, og vi sier at en funksjon tar ingen, en eller flere parameter inn. Variabler som er laget inni en funksjon er såkalt «lokale», dvs de eksisterer kun inne i funksjonen. Man kan heller ikke endre på variabler fra «utsiden» inne i funksjoner. Dette er fordi en funksjon ikke skal lage krøll på dine variabler eller variabler i andre funksjoner.</p>
+<p>Nedenfor er det 3 eksempler på funksjoner. Legg merke til at vi gjenbruker a og b som variabler, det er helt ok siden de kun eksisterer inne i hver sin funksjon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funksjonsdefinisjoner skal stå øverst i pythonkoden ( i det minste før den kalles og kjøres )</span>
+
+<span class="c1"># en funksjon uten argumenter (parametere) hverken input eller output</span>
+<span class="k">def</span> <span class="nf">funksjonUten</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Denne funksjonen skriver bare ut dette&quot;</span><span class="p">)</span>
+    
+<span class="c1"># en funksjon med 2 input og ingen output</span>
+<span class="k">def</span> <span class="nf">leggSammen</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Svaret er:&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;+&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+    
+<span class="c1"># en funksjon med 2 input og en output</span>
+<span class="k">def</span> <span class="nf">multipliser</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">svartekst</span> <span class="o">=</span> <span class="s2">&quot;Svaret er: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; * &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">svartekst</span>
+
+<span class="c1"># Kaller funksjonene:</span>
+
+<span class="c1"># første funksjone er bare en sekvens</span>
+<span class="n">funksjonUten</span><span class="p">()</span>
+
+<span class="c1"># den andre funksjonen tar forskjellige parameter inn, men skriver ut svaret fra inne i funksjonen</span>
+<span class="n">leggSammen</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">leggSammen</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># den tredje funksjonen returnerer svaret slik at vi kan spare den i vår egen variabel</span>
+<span class="n">svar</span> <span class="o">=</span> <span class="n">multipliser</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svar</span><span class="p">)</span>
+<span class="c1"># eller bruke den direkte som input i en annen funksjon (snedig)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multipliser</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Denne funksjonen skriver bare ut dette
+Svaret er: 2 + 5 = 7
+Svaret er: -3 + 2 = -1
+Svaret er: 3 * 4 = 12
+Svaret er: -5 * 6 = -30
+</pre></div>
+</div>
+</div>
+</div>
+<section id="hvordan-bruke-funksjoner-i-matematisk-sammenheng">
+<h2>Hvordan bruke funksjoner i matematisk sammenheng<a class="headerlink" href="#hvordan-bruke-funksjoner-i-matematisk-sammenheng" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># definerer funksjonene</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Lager x-verditabell</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Plotter y mot x og setter på aksenavn</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x-akse&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y-akse&quot;</span><span class="p">)</span>
+<span class="c1"># siden funksjonen returnerer y-tabell kan jeg bruke funksjonskallet direkte i plot()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x14956dcd6d0&gt;]
+</pre></div>
+</div>
+<img alt="_images/2e962a922cfc9b44d7e643117453edda23b8c138e83fd14af314dc47be0f84a2.png" src="_images/2e962a922cfc9b44d7e643117453edda23b8c138e83fd14af314dc47be0f84a2.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="biblioteker">
+<h1>Biblioteker<a class="headerlink" href="#biblioteker" title="Permalink to this heading">#</a></h1>
+<p>Python er et programmeringsspråk under utvikling, selv om struktur og basiskommandoer er uendret kan det hende at det kommer nye konvensjoner på hvordan ting skal gjøres. Derfor kan det hende at man i noen kodeeksempler ser at ting blir gjort på én måte, mens i andre eksempler en annen. I skrivende stund er Python i versjon 3, som kom i 2008. Likevel er det vanlig å finne eksempler som er skrevet i versjon 2.7. Disse eksemplene kjører fint i Python 3, men det hender at du vil få en advarsel under kjøring.</p>
+<section id="star-imports">
+<h2>“Star imports”<a class="headerlink" href="#star-imports" title="Permalink to this heading">#</a></h2>
+<p>Det er spesielt en ting man skal legge merke til. Når det gjelder importering av biblioteker vil man nå, i de fleste utviklingsmiljøer (f. eks Spyder) få advarsel hvis man prøver å importere hele biblioteker uten å gi de et lokalt navn. Se eksempelet under:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">svar</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.4492935982947064e-16
+</pre></div>
+</div>
+</div>
+</div>
+<p>Her er bibliotekene math og numpy importert på den gamle måten med alle sine respektive funksjoner. Det betyr at hvis disse bibliotekene inneholder en funksjon eller en konstant med samme navn, så vet ikke Python hvilken som skal kjøres. Og begge disse matematikkbibliotekene inneholder hver sin utgave av funksjonen sin() og pi. I den 3. instruksen her, svar = sin(2*pi), velger sannsynligvis Python fra det biblioteket som ble importert først. Akkurat her har det ikke noe å si for resultatet, men det er ikke alltid sikkert.</p>
+</section>
+<section id="import-metoden">
+<h2>Import-metoden<a class="headerlink" href="#import-metoden" title="Permalink to this heading">#</a></h2>
+<p>En mye bedre måte å importere biblioteker på er å bruke denne metoden:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="n">svar</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.4492935982947064e-16
+</pre></div>
+</div>
+</div>
+</div>
+<p>Her blir bibliotekenes funksjoner importer under sitt eget navn. Når man da skal kalle funksjoner eller bruke konstanter fra bibliotekene så angir man dette med biblioteksnavnet som prefiks slik: biblioteksnavn.funksjonsnavn() eller konstantnavn. På denne måten kan vi importere biblioteker som inneholder funksjoner med samme navn uten at det blir problemer av det. I eksempelet over brukes sinusfunksjonen fra math, og konstanten pi fra numpy</p>
+</section>
+<section id="alias-metoden">
+<h2>Alias-metoden<a class="headerlink" href="#alias-metoden" title="Permalink to this heading">#</a></h2>
+<p>Man kan også importere biblioteker og gi de et lokalt alias. Denne metoden er ofte brukt for å lage forkortelser, eller hvis man skal importere et underbibliotek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">svar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.4492935982947064e-16
+</pre></div>
+</div>
+</div>
+</div>
+<p>Her er bibliotekene math og numpy importert slik at de får de lokale aliasene m og np. Man kan selv velge hvilket alias som skal brukes lokalt, men det er lurt å velge et navn slik at man husker hva det refererer til. Hvis man vil bruke sin() fra numpy, så skriver man np.sin(). I eksempelet over henter vi sin() fra numpy og konstanten pi fra math. (Motsatt av forrige eksempel!)</p>
+</section>
+<section id="importere-del-av-et-bibliotek">
+<h2>Importere del av et bibliotek<a class="headerlink" href="#importere-del-av-et-bibliotek" title="Permalink to this heading">#</a></h2>
+<p>Noen ganger vil man ikke importere hele biblioteker, da kan man importere bare den biten man ønsker seg. I eksempelet under vil vi importere en plottefunksjon fra mathplotlib, som er et ganske omfattende bibliotek.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x14958604ed0&gt;]
+</pre></div>
+</div>
+<img alt="_images/c4dfd41fed161f4dc3f8199918516212bc140f3eecb0d3a5015ee55cc6fdba04.png" src="_images/c4dfd41fed161f4dc3f8199918516212bc140f3eecb0d3a5015ee55cc6fdba04.png" />
+</div>
+</div>
+<p>Koden over importerer kun underbiblioteket pyplot og vi gir det det lokale aliaset plt, som nå refererer direkte til dette.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Skiskyting.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Skiskyting - visuell simulering</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Mattespill-KidsaKoder.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mattespill - fra kidsakoder.no</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Arrayer og tabeller</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lister-tupler-og-biblioteker">Lister, tupler og biblioteker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasjon-av-lister">Iterasjon av lister</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrayer">Arrayer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasjon-av-arrays">Iterasjon av Arrays</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funksjoner">Funksjoner</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hvordan-bruke-funksjoner-i-matematisk-sammenheng">Hvordan bruke funksjoner i matematisk sammenheng</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#biblioteker">Biblioteker</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-imports">“Star imports”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-metoden">Import-metoden</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alias-metoden">Alias-metoden</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importere-del-av-et-bibliotek">Importere del av et bibliotek</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
