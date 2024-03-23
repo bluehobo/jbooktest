@@ -472,7 +472,7 @@ document.write(`
 <p>Sensorverdier fra jordfuktsensoren leses som analogverdi fra P0</p>
 <p>Styring av pumpen skjer ved å sette digital verdi på P1 til 1 (3V) for å starte pumpen, og digital verdi P1 til 0 (0V) for å stoppe den.</p>
 <p>I blokken “ved start” setter vi styringssignalet til pumpen til LOW, eller 0V for å være helt sikre på at pumpen ikke starter av seg selv</p>
-<p>For å kunne lese av den digitale verdien fra jordfuktsensoren har vi en kodeblogg “når knapp A trykkes” som skriver denne verdien til skjerm. Dette kan være nyttig for å finne ut hva slags verdier som denne sensoren gir fra tørr eller fuktig jord.</p>
+<p>For å kunne lese av den digitale verdien fra jordfuktsensoren har vi en kodeblokk “når knapp A trykkes” som skriver denne verdien til skjerm. Dette kan være nyttig for å finne ut hva slags verdier som denne sensoren gir fra tørr eller fuktig jord.</p>
 <p>Selve pumpestyringen skjer i “gjenta for alltid”-sløyfen. I denne eksempelkoden er grensen for at pumpen skal starte satt til verdien 500, men den reelle grenseverdien må finnes ved utprøving på en reell potteplante.</p>
 <p>Dersom avlest verdi er høyere enn grenseverdien vil if-testen slå inn, og pumpen kjøres i 5 sekunder. Denne verdien må også finnes ved eksperimentering: hvor mye vann pumpes per tid, og hvor mye vann trenger potteplanten per vanning.</p>
 <p>Deretter venter systemet i 1 minutt før den sjekker fuktigheten i potteplanten på nytt. Dette er nok alt for kort tid i en reell situasjon, og systemet trenger kanskje ikke å sjekke for vanning mer enn et par ganger om dagen. Dessuten trenger potteplanten noe tid for at vannet skal fordeles jevnt i jorden.</p>
